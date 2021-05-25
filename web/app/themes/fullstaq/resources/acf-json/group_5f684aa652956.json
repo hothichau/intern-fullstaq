@@ -1,0 +1,62 @@
+{
+    "key": "group_5f684aa652956",
+    "title": "Block Properties",
+    "fields": [
+        {
+            "key": "field_5f684ad56fe15",
+            "label": "Block ID",
+            "name": "block_id",
+            "type": "text",
+            "instructions": "Add anchor for internal links (eg: enter 'destination' for fullstack.com\/thispage#destination)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5f684ad06fe14",
+            "label": "Block Title",
+            "name": "block_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "all"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1601977384
+}

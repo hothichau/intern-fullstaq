@@ -1,0 +1,24 @@
+# Application
+/vendor/
+/web/app/themes/sb-sage/vendor/
+
+web/wp/
+.idea/
+web/app/uploads/
+web/app/plugins/
+!web/app/plugins/config-gutenberg-block
+!web/app/plugins/wpmudev-updates
+!web/app/plugins/eu-cookie-manager
+!web/app/plugins/warpdrive
+!web/app/mu-plugins/clear-cache.php
+# Wordfence auto generated files
+web/app/wflogs
+
+# Humming bird auto generated files
+web/app/wphb-logs
+web/app/wphb-cache
+web/app/advanced-cache.php
+
+.env
+web/app/languages/
+web/app/plugins/.gitkeep
