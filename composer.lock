@@ -4255,6 +4255,24 @@
             "homepage": "https://wordpress.org/plugins/code-syntax-block/"
         },
         {
+            "name": "wpackagist-plugin/duplicate-post",
+            "version": "3.2.6",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/duplicate-post/",
+                "reference": "tags/3.2.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/duplicate-post.3.2.6.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/duplicate-post/"
+        },
+        {
             "name": "wpackagist-plugin/google-analytics-for-wordpress",
             "version": "7.12.2",
             "source": {
@@ -4396,10 +4414,10 @@
         },
         {
             "name": "wpmudev/wp-hummingbird",
-            "version": "2.6.1",
+            "version": "2.7",
             "dist": {
                 "type": "zip",
-                "url": "https://premium.wpmudev.org/download/hummingbird-pro-2.6.1.zip",
+                "url": "https://premium.wpmudev.org/download/hummingbird-pro-2.7.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -4415,12 +4433,10 @@
         },
         {
             "name": "wpmudev/wp-smush-pro",
-            "version": "3.7",
+            "version": "3.8.1",
             "dist": {
                 "type": "zip",
-                "url": "https://premium.wpmudev.org/download/smush-pro-3.7.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://premium.wpmudev.org/download/smush-pro-3.8.1.zip"
             },
             "require": {
                 "composer/installers": "1.*"

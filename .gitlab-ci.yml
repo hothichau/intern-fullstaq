@@ -1,0 +1,105 @@
+image: php:7.3
+
+variables:
+  GIT_SSL_NO_VERIFY: "1"
+  THEME_NAME: "fullstaq"
+  DISTRIBUTE_DIR: dist
+
+stages:
+  - build
+  - deploy
+
+before_script:
+  - apt-get update -qq && apt-get install -y git curl wget gnupg libzip-dev libpng-dev
+  - docker-php-ext-install zip gd
+  - mkdir -p "$DISTRIBUTE_DIR"
+
+build_project:
+  stage: build
+  only:
+    - develop
+    - master
+  script:
+    - echo Building Project
+
+    # Install Node.js and Yarn
+    - curl -sL https://deb.nodesource.com/setup_10.x | bash
+    - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
+    - echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
+    - apt-get update && apt-get install --yes nodejs yarn
+    - node -v
+    - yarn -v
+
+    - |
+      if [[ "$CI_COMMIT_REF_SLUG" == "master" ]]; then cp .gitlab/.env.production .env;
+      elif [ `echo $CI_COMMIT_REF_NAME | grep -c "release/"` -gt 0 ] || [ `echo $CI_COMMIT_REF_NAME | grep -c "hotfix/"` -gt 0 ]; then cp .gitlab/.env.acceptance .env;
+      elif [ `echo $CI_COMMIT_REF_NAME | grep -c "feature/"` -gt 0 ]; then cp .gitlab/.env.staging .env;
+      elif [[ "$CI_COMMIT_REF_NAME" == "develop" ]]; then cp .gitlab/.env.staging .env; fi
+
+    - wget https://getcomposer.org/composer-1.phar -O composer.phar
+    # Install wordpress and plugins by composer
+    - php composer.phar install --no-dev
+
+    # Install theme dependencies
+    - php composer.phar install -d $CI_PROJECT_DIR/web/app/themes/$THEME_NAME --no-dev
+    - rm -rf composer.phar
+
+    # Build static files for theme
+    - cd "$CI_PROJECT_DIR/web/app/themes/$THEME_NAME/"
+    - yarn install && yarn build:production
+    - rm -rf .cache-loader node_modules composer.* *.md yarn.lock *.json *.xml .editorconfig .eslintrc.js .gitignore .stylelintrc.js
+    - cd "$CI_PROJECT_DIR/"
+    # Remove the languages because they are persistent on the server
+    - rm -rf web/app/languages
+    # Copy code to folder distribute
+    - cp -rf .env deploy.sh config web wp-cli.yml vendor "$DISTRIBUTE_DIR/"
+
+  artifacts:
+    paths:
+      - "$DISTRIBUTE_DIR"
+    expire_in: 1h
+
+deploy_test:
+  stage: deploy
+  environment:
+    name: test
+    url: https://fullstaq.stagingsite.nl/
+  only:
+    - develop
+  variables:
+    DEPLOY_USER: "fullstaq@185.110.173.87"
+    DOCUMENT_ROOT: "/var/www/vhosts/fullstaq.stagingsite.nl/wordpress"
+  script:
+    - echo Deploying to staging
+    - which sshpass || ( apt-get update -y && apt-get install openssh-client sshpass -y )
+    - echo "${STAGING_SERVER_PASS}" > "$CI_PROJECT_DIR/.sshpass"
+    - set -xe
+    - cd $DISTRIBUTE_DIR/ && tar -zcvf ../build-$CI_PIPELINE_IID.tar.gz . > /dev/null && cd ..
+    - $(which sshpass) -f "$CI_PROJECT_DIR/.sshpass" ssh -o stricthostkeychecking=no $DEPLOY_USER "mkdir -p $DOCUMENT_ROOT/build"
+    - $(which sshpass) -f "$CI_PROJECT_DIR/.sshpass" scp build-$CI_PIPELINE_IID.tar.gz $DEPLOY_USER:$DOCUMENT_ROOT/build
+    - $(which sshpass) -f "$CI_PROJECT_DIR/.sshpass" ssh $DEPLOY_USER "tar -xzf $DOCUMENT_ROOT/build/build-$CI_PIPELINE_IID.tar.gz -C $DOCUMENT_ROOT/build"
+    - $(which sshpass) -f "$CI_PROJECT_DIR/.sshpass" ssh $DEPLOY_USER "rm $DOCUMENT_ROOT/build/build-$CI_PIPELINE_IID.tar.gz"
+    - $(which sshpass) -f "$CI_PROJECT_DIR/.sshpass" ssh $DEPLOY_USER "bash $DOCUMENT_ROOT/build/deploy.sh $CI_PIPELINE_IID --blog_public 0 --php /opt/plesk/php/7.3/bin/php"
+
+deploy_production:
+  stage: deploy
+  only:
+    - master
+  environment:
+    name: production
+    url: https://fullstaq.com/
+  variables:
+    DEPLOY_USER: "comful-mekhovoye@comful-mekhovoye.savviihq.com"
+    DOCUMENT_ROOT: "/var/www/comful-mekhovoye/wordpress"
+  script:
+    - echo Deploying to production
+    - which sshpass || ( apt-get update -y && apt-get install openssh-client sshpass -y )
+    - echo "${PRODUCTION_SERVER_PASS}" > "$CI_PROJECT_DIR/.sshpass"
+    - set -xe
+    - cd $DISTRIBUTE_DIR/ && tar -zcvf ../build-$CI_PIPELINE_IID.tar.gz . > /dev/null && cd ..
+    - $(which sshpass) -f "$CI_PROJECT_DIR/.sshpass" ssh -o stricthostkeychecking=no $DEPLOY_USER "mkdir -p $DOCUMENT_ROOT/build"
+    - $(which sshpass) -f "$CI_PROJECT_DIR/.sshpass" scp build-$CI_PIPELINE_IID.tar.gz $DEPLOY_USER:$DOCUMENT_ROOT/build
+    - $(which sshpass) -f "$CI_PROJECT_DIR/.sshpass" ssh $DEPLOY_USER "tar -xzf $DOCUMENT_ROOT/build/build-$CI_PIPELINE_IID.tar.gz -C $DOCUMENT_ROOT/build"
+    - $(which sshpass) -f "$CI_PROJECT_DIR/.sshpass" ssh $DEPLOY_USER "rm $DOCUMENT_ROOT/build/build-$CI_PIPELINE_IID.tar.gz"
+    - $(which sshpass) -f "$CI_PROJECT_DIR/.sshpass" ssh $DEPLOY_USER "bash $DOCUMENT_ROOT/build/deploy.sh $CI_PIPELINE_IID --blog_public 1"
+

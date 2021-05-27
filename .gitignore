@@ -1,16 +1,22 @@
 # Application
+.env
 /vendor/
-/web/app/themes/sb-sage/vendor/
+/web/app/themes/fullstaq/vendor/
 
 web/wp/
 .idea/
 web/app/uploads/
-web/app/plugins/
-!web/app/plugins/config-gutenberg-block
-!web/app/plugins/wpmudev-updates
+web/app/wflogs/
+
+# Plugins
+web/app/mu-plugins/
+web/app/languages/
+web/app/plugins/*/
+!web/app/plugins/config-gutenberg-block/
 !web/app/plugins/eu-cookie-manager
-!web/app/plugins/warpdrive
-!web/app/mu-plugins/clear-cache.php
+!web/app/plugins/wpmudev-updates
+!web/app/plugins/sfsb_default_user_roles
+
 # Wordfence auto generated files
 web/app/wflogs
 
@@ -18,7 +24,3 @@ web/app/wflogs
 web/app/wphb-logs
 web/app/wphb-cache
 web/app/advanced-cache.php
-
-.env
-web/app/languages/
-web/app/plugins/.gitkeep

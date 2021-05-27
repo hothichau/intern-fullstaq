@@ -1,4 +1,4 @@
-# WP Training Fullstaq
+# Fullstaq
 
 ## Git-flow
 This project uses **Git flow**
@@ -9,7 +9,7 @@ You can find the documentation in the [wiki](https://wiki.bureaublauwgeel.nl/#!s
 Read here [WordPress Coding Standards](https://make.wordpress.org/core/handbook/best-practices/coding-standards/php/)
 
 ## Require tools
-[Composer](https://getcomposer.org)
+[Composer](https://getcomposer.org)  
 
 ## Install
 1. Setup the correct .env file for you environment using `.gitlab/.env.staging` as a base.
@@ -21,32 +21,31 @@ Or setup manually:
  3. Download theme dependencies `composer install`
  4. Run yarn install `yarn install`
  5. Run yarn build `yarn build`
-
+ 
 ## Testing
 Not available for now.
 
 ## Auto deploy (CI/CD)
-1. Branch `master` will be deployed to `production` at ``
-2. Branch `develop` will be deployed to `staging test` site at ``.
+1. Branch `master` will be deployed to `production` currently not available. (not live yet)
+2. Branch `develop` will be deployed to `staging` site at `https://fullstaq.stagingsite.nl`.
 
 Note: Admin account information is in LastPass.
 
 ## What is going to be deployed
 The following is going to be de deployed
 
-* Wordpress version 5.5.*
+* Wordpress version 5.4.*
 * The **themes** in `app/themes`
 * The **plugins** in `app/plugins`
 * The **mu-plugins** in `app/mu-plugins`
-* The **languages** files in `app/languages`
 
 ## Database migration
-Database will be updated whenever admin run update plugins.
+Database will be updated whenever admin run update plugins.  
 Core WordPress will be updated from file `composer.json` and automatically updated when auto-deploy.
 
 ### Setup a development environment on Mac / Windows
-1. Clone source code from repository:
-    `https://git.sunbytes.nl/general/wp-training-fullstaq`
+1. Clone source code from repository:  
+    `git clone https://git.sunbytes.nl/simplefly/fullstaq.git`  
 then switch to branch develop `git checkout develop`
 2. Setup your virtual-host config and restart your local web-service (Apache, Nginx)
     ```
@@ -58,8 +57,8 @@ then switch to branch develop `git checkout develop`
         CustomLog "/private/var/log/fullstaq" common
     </VirtualHost>
     ```
-3. Setup the hosts file /etc/hosts
-    `127.0.0.1 fullstaq.local`
+3. Setup the hosts file /etc/hosts  
+    `127.0.0.1 fullstaq.local`  
 4. Change the variables in file `.env` (or copy .gitlab/.env.staging to `.env`)
 5. Execute `setup.sh` to setup project
 6. Download sql file from staging (check lastpass)
@@ -124,7 +123,7 @@ location ~ ^/wp-json/ {
 ### Folder structure on staging server at pl131.plesk.provider.nl
 
 ```
-/var/www/vhosts/ode.stagingsite.nl/wordpress
+/var/www/vhosts/fullstaq.stagingsite.nl
 
 ├── wordpress                   # Wordpress directory
     ├── current                 # Documentroot, symlink to the `web` folder of the latest build
@@ -134,4 +133,5 @@ location ~ ^/wp-json/ {
     │   └── build-xxx           # Build version (keep last 3 builds)
     └── persistent
         └── uploads             # the persistent folder for uploads, symlinked from the `app` folder of the latest build
+        └── languages           # the persistent folder for languages, symlinked from the `app` folder of the latest build
 ```
