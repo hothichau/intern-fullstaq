@@ -1,0 +1,9 @@
+ul,
+ol {
+  li {
+    &::marker {
+      color: $purple-2;
+      font-family: $font-mark-pro;
+    }
+  }
+}
