@@ -28,9 +28,9 @@ $black-3: #4d4d4d;
 $yellow: #ffc600;
 $yellow-1: #ffd504;
 $blue: #001937;
-$rgb: rgba(0,0,0,0.15);
-$rgb-1: rgba(255,255,255,0.2);
-$rbg-2: rgba(9,9,11,0.5);
+$rgb: rgba($black,0.15);
+$rgb-1: rgba($white,0.2);
+$rbg-2: rgba($black-1,0.5);
 $theme-colors: (
   "primary": $purple,
 );
@@ -38,7 +38,7 @@ $theme-colors: (
 /** Bootstrap navbar fix (https://git.io/fADqW) */
 $navbar-dark-toggler-icon-bg: none;
 $navbar-light-toggler-icon-bg: none;
-$body-color: #09090b;
+$body-color: $black-1;
 $font-family-base: "Cera Pro", Arial;
 $font-mark-pro: "Mark pro", Arial;
 $link-hover-color: #3d0967;
