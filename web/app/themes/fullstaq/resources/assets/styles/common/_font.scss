@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "Mark Pro";
+  font-style: normal;
+  font-weight: 700;
+  src:
+    local("Mark Pro Bold"),
+    local("MarkPro-Bold"),
+    url("../../fonts/MarkPro-Bold.woff2") format("woff2"),
+    url("../../fonts/MarkPro-Bold.woff") format("woff"),
+    url("../../fonts/MarkPro-Bold.ttf") format("truetype"),
+    url("../../fonts/MarkPro-Bold.svg") format("svg");
+}
+
+@font-face {
+  font-family: "Cera Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    local("Cera Pro Regular"),
+    local("CeraPro-Regular"),
+    url("../../fonts/CeraPro-Regular.woff2") format("woff2"),
+    url("../../fonts/CeraPro-Regular.woff") format("woff"),
+    url("../../fonts/CeraPro-Regular.ttf") format("truetype"),
+    url("../../fonts/CeraPro-Regular.svg") format("svg");
+}
+
+@font-face {
+  font-family: "Cera Pro";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src:
+    local("Cera Pro Italic"),
+    local("CeraPro-Italic"),
+    url("../../fonts/CeraPro-Italic.woff2") format("woff2"),
+    url("../../fonts/CeraPro-Italic.woff") format("woff"),
+    url("../../fonts/CeraPro-Italic.ttf") format("truetype"),
+    url("../../fonts/CeraPro-Italic.svg") format("svg");
+}
+
+@font-face {
+  font-family: "Cera Pro";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src:
+    local("Cera Pro Bold"),
+    local("CeraPro-Bold"),
+    url("../../fonts/CeraPro-Bold.woff2") format("woff2"),
+    url("../../fonts/CeraPro-Bold.woff") format("woff"),
+    url("../../fonts/CeraPro-Bold.ttf") format("truetype"),
+    url("../../fonts/CeraPro-Bold.svg") format("svg");
+}
