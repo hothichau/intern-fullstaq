@@ -1,0 +1,90 @@
+.wp-block-button {
+  &__link {
+    padding: 12px 25px 10px;
+    font-size: 13 / 16 + rem;
+    line-height: calc(24 / 13);
+    letter-spacing: 2px;
+    background: $yellow;
+    text-transform: uppercase;
+    border-radius: 0;
+    font-family: $font-mark-pro;
+    position: relative;
+    overflow: hidden;
+    transform: translate(0);
+
+    &::before {
+      height: 150px;
+      border: none;
+      background: $black;
+      content: "";
+      position: absolute;
+      top: -250px;
+      left: 0;
+      right: 0;
+      z-index: -1;
+      transition: all 250ms ease;
+      transform: skewY(15deg) translateY(0);
+    }
+
+    &:hover {
+      color: $white;
+
+      &::before {
+        top: -50px;
+      }
+    }
+
+    .is-style-outline & {
+      padding: 10px 25px 8px;
+      color: $purple-2;
+      border-color: $purple-2;
+      border-width: 2px;
+
+      &:hover {
+        padding: 12px 27px 10px;
+        border: 0;
+      }
+
+      &::before {
+        background: $purple-2;
+      }
+
+      &:not([href]):not([tabindex]) {
+        color: $purple-2;
+      }
+    }
+
+    &:not([href]):not([tabindex]):hover {
+      color: $white;
+    }
+  }
+}
+
+.btn-readmore {
+  display: inline-block;
+  padding-bottom: 8px;
+  font-family: $font-mark-pro;
+  letter-spacing: 0.6px;
+  color: $purple-2;
+  border-bottom: 4px solid $purple-2;
+
+  &::after {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    content: "";
+    margin-left: 12px;
+    vertical-align: middle;
+    background: url("../images/arrow-read-more.svg") no-repeat center;
+  }
+
+  &:hover {
+    color: $black-1;
+    border-color: $black-1;
+    text-decoration: none;
+
+    &::after {
+      background-image: url("../images/arrow-read-more-hover.svg");
+    }
+  }
+}
