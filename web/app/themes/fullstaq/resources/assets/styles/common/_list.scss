@@ -1,32 +1,43 @@
 ul,
 ol {
+  list-style: none;
   margin-bottom: 1.5rem;
 
   li {
     line-height: calc(32 / 16);
     color: $black-1;
 
-    &::marker {
-      color: $purple-2;
-      font-family: $font-mark-pro;
+    &::before {
+      margin-right: 0.75rem;
     }
   }
 }
 
 ul {
   li {
-    &::marker {
-      font-size: 1.7rem;
+    &::before {
+      width: 6px;
+      height: 6px;
+      background-color: $purple-2;
+      border-radius: 50%;
+      content: "";
+      display: inline-block;
     }
   }
 }
 
 ol {
-  li {
-    padding: 0.5rem;
+  counter-reset: section;
 
-    &::marker {
+  li {
+    counter-increment: section;
+
+    &::before {
+      font-family: $font-mark-pro;
       font-size: 14 / 16 + rem;
+      line-height: calc(18 / 16);
+      color: $purple-2;
+      content: counter(section) ".";
     }
   }
 }
