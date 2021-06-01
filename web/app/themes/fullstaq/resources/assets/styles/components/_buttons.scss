@@ -1,6 +1,6 @@
 .wp-block-button {
   &__link {
-    padding: 12px 25px 10px;
+    padding: 0.75rem 1.5rem 0.6rem;
     font-size: 13 / 16 + rem;
     line-height: calc(24 / 13);
     letter-spacing: 2px;
@@ -22,7 +22,7 @@
       left: 0;
       right: 0;
       z-index: -1;
-      transition: all 250ms ease;
+      transition: transform 0.2s ease, top 0.2s ease;
       transform: skewY(15deg) translateY(0);
     }
 
@@ -35,13 +35,13 @@
     }
 
     .is-style-outline & {
-      padding: 10px 25px 8px;
+      padding: 0.6rem 1.5rem 0.5rem;
       color: $purple-2;
       border-color: $purple-2;
       border-width: 2px;
 
       &:hover {
-        padding: 12px 27px 10px;
+        padding: 0.75rem 1.6rem 0.6rem;
         border: 0;
       }
 
@@ -62,7 +62,7 @@
 
 .btn-readmore {
   display: inline-block;
-  padding-bottom: 8px;
+  padding-bottom: 0.5rem;
   font-family: $font-mark-pro;
   letter-spacing: 0.6px;
   color: $purple-2;
@@ -73,7 +73,7 @@
     width: 12px;
     height: 12px;
     content: "";
-    margin-left: 12px;
+    margin-left: 0.75rem;
     vertical-align: middle;
     background: url("../images/arrow-read-more.svg") no-repeat center;
   }
