@@ -1,0 +1,56 @@
+.wp-block-table {
+  border-collapse: collapse;
+  letter-spacing: normal;
+
+  th,
+  td {
+    padding: 1.1rem 0.9rem 1.4rem;
+    border: 1px solid $gray-11;
+  }
+
+  thead {
+    th {
+      font-size: 20 / 16 + rem;
+      line-height: calc(33 / 20);
+      font-family: $font-mark-pro;
+      background-color: $purple-2;
+      color: $white;
+
+      &:first-child {
+        border-left: none;
+      }
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+
+  tbody,
+  tfoot {
+    td {
+      line-height: calc(33 / 16);
+      color: $blue;
+
+      &:first-child {
+        border-left: none;
+      }
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      background-color: $white;
+    }
+  }
+
+  tfoot {
+    tr {
+      background-color: $gray-10;
+    }
+  }
+}
