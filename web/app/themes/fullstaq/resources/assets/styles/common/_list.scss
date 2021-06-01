@@ -1,9 +1,32 @@
 ul,
 ol {
+  margin-bottom: 1.5rem;
+
   li {
+    line-height: calc(32 / 16);
+    color: $black-1;
+
     &::marker {
       color: $purple-2;
       font-family: $font-mark-pro;
+    }
+  }
+}
+
+ul {
+  li {
+    &::marker {
+      font-size: 1.7rem;
+    }
+  }
+}
+
+ol {
+  li {
+    padding: 0.5rem;
+
+    &::marker {
+      font-size: 14 / 16 + rem;
     }
   }
 }

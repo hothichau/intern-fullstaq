@@ -1,7 +1,53 @@
+$gray: #beced5;
+$gray-1: #e7e7e7;
+$gray-2: #d8d8d8;
+$gray-3: #ededed;
+$gray-4: #ebf2f2;
+$gray-5: #f1f1f1;
+$gray-6: #f4f4f4;
+$gray-7: #dbdbdb;
+$gray-8: #e5e2e8;
+$gray-9: #d7d7d7;
+$gray-10: #eaeeee;
+$gray-11: #cacdcd;
+$gray-12: #ddd;
+$gray-13: #bebebe;
+$gray-14: #979797;
+$gray-15: #696969;
+$gray-16: #939393;
+$gray-17: #727272;
+$purple: #9562be;
+$purple-1: #8536c5;
+$purple-2: #5c1694;
+$purple-3: #31134a;
+$red: #f00;
+$red-1: #f91a12;
+$black-1: #09090b;
+$black-2: #333;
+$black-3: #4d4d4d;
+$yellow: #ffc600;
+$yellow-1: #ffd504;
+$blue: #001937;
+$black: #000;
+$white: #fff;
+$rgb: rgba($black, 0.15);
+$rgb-1: rgba($white, 0.2);
+$rbg-2: rgba($black-1, 0.5);
 $theme-colors: (
-  primary: #fff
+  "primary": $purple,
 );
 
 /** Bootstrap navbar fix (https://git.io/fADqW) */
 $navbar-dark-toggler-icon-bg: none;
 $navbar-light-toggler-icon-bg: none;
+$body-color: $black-1;
+$font-family-base: "Cera Pro", Arial;
+$font-mark-pro: "Mark pro", Arial;
+$link-hover-color: #3d0967;
+
+/**
+Included module paths
+ */
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
+$slick-loader-path: "~slick-carousel/slick/";
+$slick-font-path: "~slick-carousel/slick/fonts/";
