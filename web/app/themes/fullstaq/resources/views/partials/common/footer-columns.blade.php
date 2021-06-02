@@ -1,11 +1,13 @@
 @if(!empty($footerColumn['title']))
-  {!! $footerColumn['title'] !!}
+  <p class="footer__title">{!! $footerColumn['title'] !!}</p>
 @endif
 @if(!empty($footerColumn['footer_link']))
-  @foreach($footerColumn['footer_link'] as $link)
-    {!! \App\get_button_html($link, 'footer__top-list-link') !!}
-  @endforeach
+  <ul class="footer__top-list">
+    @foreach($footerColumn['footer_link'] as $link)
+      <li>{!! \App\get_button_html($link, 'footer__top-list-link') !!}</li>
+    @endforeach
+  </ul>
 @endif
 @if(!empty($footerColumn['link']))
-  {!! __('Subscribe', 'fullstaq') !!}
+  <a class="footer__btn-orange" href="{{ $footerColumn['link'] }}">{!! __('Subscribe', 'fullstaq') !!}</a>
 @endif

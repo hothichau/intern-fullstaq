@@ -1,0 +1,18 @@
+.footer {
+  background-color: $purple-2;
+  color: $white;
+
+  &__title {
+    font-size: 15 / 16 + rem;
+    line-height: calc(21 / 15);
+    letter-spacing: normal;
+    font-family: $font-mark-pro;
+  }
+
+  &__top {
+    &-list {
+      font-size: 13 / 16 + rem;
+      line-height: calc(34 / 13);
+    }
+  }
+}
