@@ -1,19 +1,205 @@
-// /** Search form */
-// .search-form {
-//   @extend .form-inline;
-// }
+.ginput_container_fileupload {
+  input[type=file] {
+    display: none;
+  }
+}
 
-// .search-form label {
-//   @extend .form-group;
+.gform {
+  &_validation_container {
+    display: none;
+  }
 
-//   font-weight: normal;
-// }
+  &_footer {
+    margin-left: 2.5rem;
+    display: inline-block;
+    overflow: hidden;
+    transform: translate(0);
+    background: $orange;
 
-// .search-form .search-field {
-//   @extend .form-control;
-// }
+    &::before {
+      height: 150px;
+      background: $black;
+      content: "";
+      position: absolute;
+      top: -250px;
+      left: -2px;
+      right: -2px;
+      z-index: -1;
+      transform: skewY(15deg) translateY(0);
+      transition: transform 0.2s ease, top 0.2s ease;
+    }
 
-// .search-form .search-submit {
-//   @extend .btn;
-//   @extend .btn-secondary;
-// }
+    &:hover {
+      color: $white;
+      text-decoration: none;
+
+      &::before {
+        top: -50px;
+      }
+    }
+  }
+
+  &_wrapper {
+    max-width: 556px;
+    margin-bottom: 60px;
+
+    .upload-file {
+      label {
+        font-family: $font-mark-pro;
+        font-size: 11 / 16 + rem;
+        line-height: calc(33 / 11);
+        text-transform: uppercase;
+        color: $purple;
+        border: 2px solid $purple-2;
+        letter-spacing: 1px;
+        cursor: pointer;
+        padding: 0 1rem;
+        margin: 0;
+      }
+    }
+
+    .gform_fileupload_rules {
+      display: none;
+    }
+
+    .button {
+      font-family: $font-mark-pro;
+      padding: 0.7rem 2.2rem;
+      font-size: 13 / 16 + rem;
+      line-height: calc(24 / 13);
+      border: 0;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      background: transparent;
+      color: $black-1;
+
+      &:hover {
+        color: $white;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    input[type=checkbox],
+    input[type=radio] {
+      display: none;
+
+      + label {
+        position: relative;
+        padding-left: 2rem;
+        font-size: 14 / 16 + rem;
+        line-height: calc(33 / 14);
+        color: $black-2;
+        display: inline-block;
+
+        &::before {
+          position: absolute;
+          top: 5px;
+          left: 0;
+          width: 18px;
+          height: 18px;
+          background: $gray;
+          content: "";
+        }
+      }
+    }
+
+    input[type=radio] {
+      + label::before {
+        border-radius: 50%;
+      }
+
+      &:checked + label {
+        color: $purple-2;
+
+        &::before {
+          background-color: $purple-2;
+        }
+
+        &::after {
+          position: absolute;
+          top: 11px;
+          left: 6px;
+          width: 6px;
+          height: 6px;
+          background-color: $white;
+          border-radius: 50%;
+          content: "";
+        }
+      }
+    }
+
+    input[type=checkbox]:checked + label {
+      color: $purple-2;
+
+      &::before {
+        background: url(../images/checkbox-checked.svg);
+      }
+    }
+
+    .gfield {
+      margin-bottom: 1.5rem;
+
+      &::before {
+        display: none;
+      }
+
+      .gfield {
+        &_checkbox,
+        &_radio {
+          padding-left: 0;
+
+          li {
+            padding-left: 0;
+
+            &::before {
+              display: none;
+            }
+          }
+        }
+      }
+
+      &_description {
+        padding: 0.3rem 0;
+        font-size: 11 / 16 + rem;
+      }
+
+      &_error {
+        .gfield_label,
+        input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]),
+        select,
+        textarea {
+          color: $red;
+          border-color: $red;
+
+          &::placeholder {
+            color: $red;
+          }
+        }
+
+        input[type=checkbox],
+        input[type=radio] {
+          + label {
+            color: $red;
+          }
+        }
+      }
+
+      &.hidden_label {
+        .gfield_label {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.validation {
+  &_message {
+    color: $red;
+    font-size: 11 / 16 + rem;
+    line-height: calc(14 / 11);
+  }
+}
