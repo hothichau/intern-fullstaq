@@ -23,3 +23,26 @@ textarea {
     border-bottom: 2px solid $purple-2;
   }
 }
+
+.gfield {
+  &_error {
+    .gfield_label,
+    input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]),
+    select,
+    textarea {
+      color: $red;
+      border-color: $red;
+
+      &::placeholder {
+        color: $red;
+      }
+    }
+
+    input[type=checkbox],
+    input[type=radio] {
+      + label {
+        color: $red;
+      }
+    }
+  }
+}
