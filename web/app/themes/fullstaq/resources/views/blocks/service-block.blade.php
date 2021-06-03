@@ -15,9 +15,9 @@
 @endphp
 @if(!empty($block_data['block_title']) && !empty($block_data['item_list']))
   <div {!! $block_data['block_id'] !!}>
-    {!! $block_data['block_title'] !!}
+    <h2 class="service-block__title">{!! $block_data['block_title'] !!}</h2>
     @unless(empty($block_data['feature_image']))
-      <img src="{!! $block_data['feature_image'] !!}">
+      <img class="service-block_image" src="{!! $block_data['feature_image'] !!}">
     @endunless
     @if(!empty($block_data['item_list']))
       @foreach($block_data['item_list'] as $service)
