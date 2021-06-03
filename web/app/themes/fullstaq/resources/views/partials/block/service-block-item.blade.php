@@ -1,14 +1,15 @@
-<div class="container">
-  <div class="row">
-    <div class="col-12">
-      @unless(empty($service['title']) || empty($service['text']) || empty($service['icon']))
-        @unless(empty($service['link']))
-        @endunless
-          <h3 class="service-item__title">{!! $service['title'] !!}</h3>
-          <p class="service-item__text">{!! $service['text'] !!}</p>
-        @unless(empty($service['link']))
-        @endunless
-      @endunless
+@unless(empty($service['title']) || empty($service['text']) || empty($service['icon']))
+<div class="col-12 col-md-6 service-item">
+  @unless(empty($service['link']))
+    <a class="service-item__link" href="{{ $service['link'] }}">
+  @endunless
+    <img class="service-item__img" src="{!! $service['icon'] !!}" alt="{!! $service['title'] !!}">
+    <div class="service-item__content">
+      <h3 class="service-item__content-title">{!! $service['title'] !!}</h3>
+      <p class="service-item__content-text">{{ $service['text'] }}</p>
     </div>
-  </div>
+  @unless(empty($service['link']))
+    </a>
+  @endunless
 </div>
+@endunless
