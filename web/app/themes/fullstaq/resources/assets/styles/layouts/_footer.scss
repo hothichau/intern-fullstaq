@@ -37,14 +37,14 @@
   }
 
   &__btn-orange {
+    @extend %btn;
+
     padding: 0.5rem 1rem;
     font-size: 9 / 16 + rem;
     line-height: calc(16 / 9);
     letter-spacing: 1.3px;
     background: $orange;
-    text-transform: uppercase;
     color: $black-1;
-    font-family: $font-mark-pro;
 
     @include media-breakpoint-up(md) {
       padding: 0.6rem 1.5rem;
@@ -70,38 +70,6 @@
     }
   }
 
-  &__social {
-    &-link {
-      margin: 0 0.6rem;
-      color: $white;
-
-      @include media-breakpoint-up(sm) {
-        font-size: 22 / 16 + rem;
-      }
-
-      @include media-breakpoint-up(lg) {
-        &:last-child {
-          margin-right: 0;
-        }
-      }
-
-      &:hover {
-        color: $orange;
-        text-decoration: none;
-
-        .footer__social-icon {
-          &--normal {
-            opacity: 0;
-          }
-
-          &--hover {
-            opacity: 1;
-          }
-        }
-      }
-    }
-  }
-
   &__bottom {
     padding: 25px 0;
     background: $black-1;
@@ -113,19 +81,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-      }
-    }
-
-    &-info {
-      @include media-breakpoint-up(sm) {
-        display: flex;
-        margin-bottom: 20px;
-        align-items: center;
-        justify-content: center;
-      }
-
-      @include media-breakpoint-up(lg) {
-        margin: 0;
       }
     }
 

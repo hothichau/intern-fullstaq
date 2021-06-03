@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="footer__bottom-info">
+  <div class="footer__bottom-info d-sm-flex align-items-sm-center justify-content-sm-center">
     <div class="footer__logo">
       @unless(empty($footer_logo))
         <img class="footer__logo-img" src="{{ $footer_logo }}" alt="{{ get_bloginfo('name', 'display') }}">
