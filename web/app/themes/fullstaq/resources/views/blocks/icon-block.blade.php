@@ -15,7 +15,7 @@
 @endphp
 @if(!empty($block_data))
   @unless(empty($block_data['icons']))
-    <div {!! $block_data['block_id'] !!} class="icons-block">
+    <div {!! $block_data['block_id'] !!} class="icons-block text-center">
       <div class="container">
         @unless(empty($block_data['block_title']) && empty($block_data['block_subtitle']))
           <div class="row justify-content-center align-items-center">
