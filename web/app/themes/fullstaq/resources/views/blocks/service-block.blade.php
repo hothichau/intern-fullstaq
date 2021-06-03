@@ -14,11 +14,13 @@
   $block_data = \App\Controllers\App::getServiceBlockData();
 @endphp
 @if(!empty($block_data['block_title']) && !empty($block_data['item_list']))
-  <div {!! $block_data['block_id'] !!}>
-    <h2 class="service-block__title">{!! $block_data['block_title'] !!}</h2>
-    @unless(empty($block_data['feature_image']))
-      <img class="service-block__feature-image" src="{!! $block_data['feature_image'] !!}" alt="featured-image">
-    @endunless
+  <div {!! $block_data['block_id'] !!} class="service-block">
+    <div class="service-block__item">
+      <h2 class="service-block__item-title">{!! $block_data['block_title'] !!}</h2>
+      @unless(empty($block_data['feature_image']))
+        <img class="service-block__item-feature_image" src="{!! $block_data['feature_image'] !!}" alt="featured-image">
+      @endunless
+    </div>
     @if(!empty($block_data['item_list']))
       <div class="container">
         <div class="row">

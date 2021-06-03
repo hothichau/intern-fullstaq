@@ -1,0 +1,25 @@
+.service-block {
+  max-height: 528px;
+  background-color: $gray-11;
+  display: flex;
+
+  &__item {
+    position: relative;
+
+    &-feature_image {
+      position: relative;
+      right: 50%;
+      left: 220%;
+      top: -20%;
+      width: 500px;
+      height: auto;
+    }
+  }
+}
+
+.service-item {
+  position: relative;
+  left: -50%;
+  top: 50%;
+  margin-top: 2rem;
+}
