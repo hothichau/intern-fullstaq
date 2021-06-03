@@ -1,5 +1,5 @@
 @if(!empty($footerColumn['title']))
-  <p class="footer__title">{!! $footerColumn['title'] !!}</p>
+  <h5 class="footer__title">{!! $footerColumn['title'] !!}</h5>
 @endif
 @if(!empty($footerColumn['footer_link']))
   <ul class="footer__top-list">
@@ -11,3 +11,4 @@
 @if(!empty($footerColumn['link']))
   <a class="footer__btn-orange" href="{{ $footerColumn['link'] }}">{!! __('Subscribe', 'fullstaq') !!}</a>
 @endif
+@dump($link)
