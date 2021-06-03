@@ -1,0 +1,9 @@
+hr {
+  margin-bottom: 3.3rem;
+  border: 0;
+  border-bottom: 1px solid $gray-7;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
