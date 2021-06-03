@@ -71,11 +71,11 @@
   }
 
   &__bottom {
-    padding: 25px 0;
+    padding: 1.5rem 0;
     background: $black-1;
 
     @include media-breakpoint-up(lg) {
-      padding: 11px 0 15px;
+      padding: 0.6rem 0 1rem;
 
       .container {
         display: flex;
