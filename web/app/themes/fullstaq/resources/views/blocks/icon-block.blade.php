@@ -19,7 +19,7 @@
       <div class="container">
         @unless(empty($block_data['block_title']) && empty($block_data['block_subtitle']))
           <div class="row justify-content-center align-items-center">
-            <div class="col-12">
+            <div class="col-12 col-md-8">
               <div class="icons-block__header">
                 @unless(empty($block_data['block_title']))
                   <h2 class="icons-block__title">{{ $block_data['block_title']  }}</h2>
@@ -31,7 +31,7 @@
             </div>
           </div>
         @endunless
-        <div class="icon-slider">
+        <div class="js-icon-slider">
           @foreach($block_data['icons'] as $icon_data)
             @include('partials.block.icon-block-item')
           @endforeach

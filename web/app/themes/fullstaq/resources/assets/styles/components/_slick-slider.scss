@@ -1,0 +1,81 @@
+.slick {
+  &-arrow {
+    width: 10px;
+    height: 16px;
+    background-size: contain;
+    color: $gray-13;
+  }
+
+  &-prev,
+  &-next {
+    background-repeat: no-repeat;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  &-prev {
+    background-image: url(../images/arrow-left.svg);
+
+    &:hover {
+      background-image: url(../images/arrow-left-hover.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &-next {
+    background-image: url(../images/arrow-right.svg);
+
+    &:hover {
+      background-image: url(../images/arrow-right-hover.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &-active {
+    button {
+      background: $purple-2;
+    }
+  }
+
+  &-dots {
+    position: static;
+    margin-top: 1rem;
+
+    li {
+      margin: 0;
+
+      &::before {
+        display: none;
+      }
+
+      button {
+        &::before {
+          top: 50%;
+          left: 50%;
+          width: 8px;
+          height: 8px;
+          background-color: $gray-9;
+          content: "";
+          border-radius: 50%;
+          opacity: 1;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      &.slick-active {
+        button {
+          &::before {
+            width: 6px;
+            height: 6px;
+            background-color: $purple-2;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

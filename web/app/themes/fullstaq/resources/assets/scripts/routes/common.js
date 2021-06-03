@@ -1,9 +1,6 @@
 const slider = () => {
-  const iconSlider = $('.icon-slider');
-
-  if (iconSlider.length > 0) {
-    iconSlider.slick({
-      slidesToShow: 2,
+  $('.js-icon-slider').slick({
+    slidesToShow: 2,
       slidesToScroll: 2,
       dots: true,
       mobileFirst: true,
@@ -16,8 +13,7 @@ const slider = () => {
           },
         },
       ],
-    });
-  }
+  });
 };
 
 export default {
