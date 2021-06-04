@@ -1,0 +1,21 @@
+.icons-block {
+  @extend %fullblock;
+  @extend %gtb-block;
+
+  &__header {
+    margin-bottom: 2.3rem;
+  }
+
+  &__title {
+    @include media-breakpoint-up(sm) {
+      font-size: 28 / 16 + rem;
+      line-height: calc(34 / 28);
+      letter-spacing: 1.1px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 1rem;
+    line-height: calc(26 / 16);
+  }
+}

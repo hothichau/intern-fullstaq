@@ -1,0 +1,18 @@
+%fullblock {
+  position: relative;
+  width: 100vw;
+  margin-left: -50vw;
+  left: 50%;
+}
+
+%gtb-block {
+  margin-bottom: 40/16 + rem;
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 60/16  + rem;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

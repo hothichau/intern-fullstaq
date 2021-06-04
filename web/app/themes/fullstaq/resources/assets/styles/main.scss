@@ -1,5 +1,21 @@
 @import "common/variables";
+
+/** Import everything from autoload */
 @import "./autoload/**/*";
+
+/**
+ * Import npm dependencies
+ *
+ * Prefix your imports with `~` to grab from node_modules/
+ * @see https://github.com/webpack-contrib/sass-loader#imports
+ */
+@import "~slick-carousel/slick/slick.scss";
+@import "~slick-carousel/slick/slick-theme.scss";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+
+/* Import theme styles */
 @import "common/global";
 @import "common/font";
 @import "common/list";
@@ -16,6 +32,9 @@
 @import "components/gtb-video";
 @import "components/table";
 @import "components/quotes";
+@import "components/icon-block";
+@import "components/slick-slider";
 @import "components/separator";
 @import "components/gtb-column";
-@import "components/service;
+@import "components/service";
+@import "components/icon-item";
