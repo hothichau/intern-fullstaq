@@ -19,7 +19,6 @@
       @unless(empty($block_data['block_title']))
         {{ $block_data['block_title']  }}
       @endunless
-
       @foreach($block_data['icons'] as $icon_data)
         @include('partials.block.icon-block-item')
       @endforeach
