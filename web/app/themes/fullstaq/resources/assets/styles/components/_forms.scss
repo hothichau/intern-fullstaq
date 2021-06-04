@@ -1,16 +1,17 @@
-// .ginput_container_fileupload {
-//   input[type=file] {
-//     display: none;
-//   }
-// }
-
 .gform {
+  &_fields {
+    padding: 0;
+  }
+
+  &_title {
+    margin-bottom: 1.5rem;
+  }
+
   &_validation_container {
     display: none;
   }
 
   &_footer {
-    margin-left: 2.5rem;
     display: inline-block;
     overflow: hidden;
     transform: translate(0);
@@ -40,8 +41,7 @@
   }
 
   &_wrapper {
-    max-width: 556px;
-    margin-bottom: 60px;
+    margin-bottom: 3.8rem;
 
     .upload-file {
       label {
@@ -83,24 +83,17 @@
     }
 
     .gfield {
-      margin-bottom: 1.5rem;
+      margin-bottom: 0.5rem;
 
       &::before {
         display: none;
       }
 
-      .gfield {
-        &_checkbox,
-        &_radio {
-          padding-left: 0;
+      li {
+        padding-left: 0;
 
-          li {
-            padding-left: 0;
-
-            &::before {
-              display: none;
-            }
-          }
+        &::before {
+          display: none;
         }
       }
 
@@ -109,10 +102,18 @@
         font-size: 11 / 16 + rem;
       }
 
+      &_radio {
+        padding: 0;
+      }
+
       &_error {
-        .gfield_label,
-        select {
-          color: $red;
+        .gchoice {
+          label {
+            color: $red;
+          }
+        }
+
+        input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]) {
           border-color: $red;
 
           &::placeholder {
@@ -126,6 +127,12 @@
           display: none;
         }
       }
+    }
+  }
+
+  &_validation {
+    &_errors {
+      display: none;
     }
   }
 }
