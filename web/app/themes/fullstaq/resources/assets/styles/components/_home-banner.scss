@@ -1,0 +1,120 @@
+.home-banner {
+  margin-bottom: 1rem;
+  background: url(../images/mobile-header-fullstaq.jpg) no-repeat top center;
+
+  @include media-breakpoint-up(md) {
+    position: relative;
+    width: 100vw;
+    margin-left: -50vw;
+    left: 50%;
+    background-image: url(../images/header-fullstaq.jpg);
+  }
+
+  &__boxed {
+    @include media-breakpoint-up(md) {
+      padding: 2.3rem 2.5rem;
+      border: 2px solid $white;
+    }
+
+    @include media-breakpoint-up(xl) {
+      padding: 3.1rem 6.3rem 2.8rem 3.1rem;
+    }
+  }
+
+  &__img {
+    display: none;
+
+    @include media-breakpoint-up(md) {
+      display: block;
+      position: absolute;
+      top: 240px;
+      left: 42%;
+      z-index: 2;
+    }
+  }
+
+  &__content {
+    position: relative;
+    padding-top: 5rem;
+    height: 703px;
+    color: $white;
+
+    @include media-breakpoint-up(md) {
+      height: 870px;
+      padding-top: 11rem;
+    }
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+
+    @include media-breakpoint-only(md) {
+      font-size: 26 / 16 + rem;
+      line-height: calc(36 / 26);
+      letter-spacing: 2.2px;
+    }
+
+    @include media-breakpoint-only(lg) {
+      font-size: 42 / 16 + rem;
+      line-height: calc(50 / 42);
+      letter-spacing: 3.6px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      font-size: 50 / 16 + rem;
+      line-height: calc(57 / 50);
+      letter-spacing: 4.3px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 1.9rem;
+    font-size: 18 / 16 + rem;
+    line-height: calc(28 / 18);
+    letter-spacing: 0.6px;
+
+    @include media-breakpoint-up(md) {
+      font-size: 1rem;
+      line-height: calc(26 / 16);
+    }
+  }
+}
+
+.btn-orange {
+  padding: 0.8rem 2.3rem 0.8rem 2rem;
+  font-family: $font-mark-pro;
+  color: $black-1;
+  font-size: 13 / 16 + rem;
+  line-height: calc(24 / 13);
+  letter-spacing: 2px;
+  background: $yellow;
+  text-transform: uppercase;
+  border-radius: 0;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  transform: translate(0);
+
+  &::before {
+    height: 150px;
+    border: none;
+    background: $black;
+    content: "";
+    position: absolute;
+    top: -250px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    transition: transform 0.2s ease, top 0.2s ease;
+    transform: skewY(15deg) translateY(0);
+  }
+
+  &:hover {
+    color: $white;
+    text-decoration: none;
+
+    &::before {
+      top: -50px;
+    }
+  }
+}
