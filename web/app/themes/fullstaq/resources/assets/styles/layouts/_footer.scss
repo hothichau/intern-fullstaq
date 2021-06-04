@@ -12,16 +12,14 @@
     &-list {
       padding: 0;
 
-      li {
-        &::before {
-          display: none;
-        }
-      }
-
       &-link {
         font-size: 13 / 16 + rem;
         line-height: calc(34 / 13);
         color: $white;
+
+        &::before {
+          display: none;
+        }
 
         &:hover {
           color: $yellow-1;
@@ -84,40 +82,44 @@
       }
     }
 
-    &-menu {
-      .menu {
-        display: flex;
-        justify-content: center;
+    .menu {
+      display: flex;
+      justify-content: center;
 
-        @include media-breakpoint-up(sm) {
-          margin: 0;
-          padding: 0;
-        }
-
-        .menu-item {
-          margin: 0 0.6rem;
-
-          &::before {
-            display: none;
-          }
-        }
+      @include media-breakpoint-up(sm) {
+        margin: 0;
+        padding: 0;
       }
 
-      a {
-        font-size: 13 / 16 + rem;
-        line-height: calc(34 / 13);
-        color: $white;
-        transition: color 0.3s;
+      &-item {
+        margin: 0 0.6rem;
 
-        &:hover {
-          color: $orange;
-        }
-
-        @include media-breakpoint-only(sm) {
-          font-size: 12 / 16 + rem;
-          line-height: calc(20 / 12);
+        &::before {
+          display: none;
         }
       }
     }
+
+    a {
+      font-size: 13 / 16 + rem;
+      line-height: calc(34 / 13);
+      color: $white;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $orange;
+      }
+
+      @include media-breakpoint-only(sm) {
+        font-size: 12 / 16 + rem;
+        line-height: calc(20 / 12);
+      }
+    }
+  }
+}
+
+.footer-social {
+  &__link {
+    padding: 0 0.5rem;
   }
 }
