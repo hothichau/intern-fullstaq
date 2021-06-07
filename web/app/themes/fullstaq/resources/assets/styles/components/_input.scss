@@ -1,0 +1,92 @@
+textarea {
+  min-height: 100px;
+  padding: 1rem;
+  border: 1px solid $black-1;
+}
+
+input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]) {
+  padding: 0.6rem 0;
+  border: 0;
+  border-bottom: 1px solid $black-1;
+}
+
+input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]),
+textarea {
+  width: 100%;
+  font-size: 14 / 16 + rem;
+  line-height: calc(30 / 14);
+  letter-spacing: normal;
+  color: $black-2;
+  background: transparent;
+
+  &::placeholder {
+    color: $gray-16;
+  }
+
+  &:focus {
+    outline: none;
+    border: 0;
+    border-bottom: 2px solid $purple-2;
+  }
+}
+
+input[type=checkbox],
+input[type=radio] {
+  display: none;
+
+  + label {
+    position: relative;
+    padding-left: 2rem;
+    font-size: 14 / 16 + rem;
+    line-height: calc(33 / 14);
+    color: $black-2;
+    display: inline-block;
+
+    &::before {
+      position: absolute;
+      top: 5px;
+      left: 0;
+      width: 18px;
+      height: 18px;
+      background: $gray;
+      content: "";
+    }
+  }
+}
+
+input[type=radio] {
+  + label::before {
+    border-radius: 50%;
+  }
+
+  &:checked + label {
+    color: $purple-2;
+
+    &::before {
+      background-color: $purple-2;
+    }
+
+    &::after {
+      position: absolute;
+      top: 11px;
+      left: 6px;
+      width: 6px;
+      height: 6px;
+      background-color: $white;
+      border-radius: 50%;
+      content: "";
+    }
+  }
+}
+
+input[type="file"] {
+  display: none;
+}
+
+input[type=checkbox]:checked + label {
+  color: $purple-2;
+
+  &::before {
+    background: url(../images/checkbox-checked.svg);
+  }
+}

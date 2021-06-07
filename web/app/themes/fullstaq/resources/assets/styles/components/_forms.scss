@@ -1,19 +1,146 @@
-// /** Search form */
-// .search-form {
-//   @extend .form-inline;
-// }
+.gform {
+  &_fields {
+    padding: 0;
+  }
 
-// .search-form label {
-//   @extend .form-group;
+  &_title {
+    margin-bottom: 1.5rem;
+  }
 
-//   font-weight: normal;
-// }
+  &_validation_container {
+    display: none;
+  }
 
-// .search-form .search-field {
-//   @extend .form-control;
-// }
+  &_footer {
+    display: inline-block;
+    overflow: hidden;
+    transform: translate(0);
+    background: $orange;
 
-// .search-form .search-submit {
-//   @extend .btn;
-//   @extend .btn-secondary;
-// }
+    &::before {
+      height: 150px;
+      background: $black;
+      content: "";
+      position: absolute;
+      top: -250px;
+      left: -2px;
+      right: -2px;
+      z-index: -1;
+      transform: skewY(15deg) translateY(0);
+      transition: transform 0.2s ease, top 0.2s ease;
+    }
+
+    &:hover {
+      color: $white;
+      text-decoration: none;
+
+      &::before {
+        top: -50px;
+      }
+    }
+  }
+
+  &_wrapper {
+    margin-bottom: 3.8rem;
+
+    .upload-file {
+      label {
+        font-family: $font-mark-pro;
+        font-size: 11 / 16 + rem;
+        line-height: calc(33 / 11);
+        text-transform: uppercase;
+        color: $purple;
+        border: 2px solid $purple-2;
+        letter-spacing: 1px;
+        cursor: pointer;
+        padding: 0 1rem;
+        margin: 0;
+      }
+    }
+
+    .gform_fileupload_rules {
+      display: none;
+    }
+
+    .button {
+      font-family: $font-mark-pro;
+      padding: 0.7rem 2.2rem;
+      font-size: 13 / 16 + rem;
+      line-height: calc(24 / 13);
+      border: 0;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      background: transparent;
+      color: $black-1;
+
+      &:hover {
+        color: $white;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .gfield {
+      margin-bottom: 0.5rem;
+
+      &::before {
+        display: none;
+      }
+
+      li {
+        padding-left: 0;
+
+        &::before {
+          display: none;
+        }
+      }
+
+      &_description {
+        padding: 0.3rem 0;
+        font-size: 11 / 16 + rem;
+      }
+
+      &_radio {
+        padding: 0;
+      }
+
+      &_error {
+        .gchoice {
+          label {
+            color: $red;
+          }
+        }
+
+        input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]) {
+          border-color: $red;
+
+          &::placeholder {
+            color: $red;
+          }
+        }
+      }
+
+      &.hidden_label {
+        .gfield_label {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &_validation {
+    &_errors {
+      display: none;
+    }
+  }
+}
+
+.validation {
+  &_message {
+    color: $red;
+    font-size: 11 / 16 + rem;
+    line-height: calc(14 / 11);
+  }
+}
