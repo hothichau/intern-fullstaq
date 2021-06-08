@@ -1,0 +1,51 @@
+.career-banner {
+  position: relative;
+  color: $white;
+  background: $purple-2 cover center no-repeat;
+  margin-bottom: 2.1rem;
+
+  + .breadcrumbs {
+    margin-top: -2rem;
+    font-size: 12px;
+    line-height: calc(24 / 16);
+  }
+
+  &__inner {
+    position: relative;
+    height: 697px;
+  }
+
+  &__title {
+    margin-bottom: 1.2rem;
+  }
+
+  &__desc {
+    margin-bottom: 0.9rem;
+    line-height: calc(26 / 16);
+  }
+
+  .social-share {
+    margin: 2.8rem 0 0;
+
+    &__label {
+      color: $white;
+    }
+
+    &__link {
+      color: $black-1;
+      background-color: $white;
+
+      &:hover {
+        background-color: $yellow-1;
+      }
+    }
+  }
+
+  .job-list {
+    &__item {
+      &-tags {
+        color: $white;
+      }
+    }
+  }
+}
