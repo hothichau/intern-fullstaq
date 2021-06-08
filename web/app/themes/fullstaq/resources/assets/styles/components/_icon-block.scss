@@ -1,6 +1,6 @@
 .icons-block {
   @extend %fullblock;
-  @extend %gtb-block;
+  @extend %default-block;
 
   &__header {
     margin-bottom: 2.3rem;

@@ -5,11 +5,13 @@
   left: 50%;
 }
 
-%gtb-block {
-  margin-bottom: 40/16 + rem;
+%default-block {
+  margin-bottom: 2.5rem;
+  margin-top: 2.5rem;
 
   @include media-breakpoint-up(md) {
-    margin-bottom: 60/16  + rem;
+    margin-bottom: 3.8rem;
+    margin-top: 3.8rem;
   }
 
   &:last-child {
