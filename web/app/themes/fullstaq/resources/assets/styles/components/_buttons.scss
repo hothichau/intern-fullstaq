@@ -95,3 +95,14 @@
     }
   }
 }
+
+.btn-orange {
+  @extend %btn;
+
+  padding: 0.8rem 2.3rem 0.8rem 2rem;
+  color: $black-1;
+  font-size: 13 / 16 + rem;
+  line-height: calc(24 / 13);
+  letter-spacing: 2px;
+  background: $yellow;
+}
