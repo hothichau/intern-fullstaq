@@ -1,15 +1,8 @@
 .banner-block {
-  // @extend %default-block;
+  @extend %fullblock;
 
-  position: relative;
-  width: 100vw;
-  padding: 50px 0;
-  margin-left: -50vw;
-  left: 50%;
   min-height: 560px;
-  background-position: center;
-  background-color: $purple-2;
-  background-size: cover;
+  background: $purple-2 center cover;
   margin-top: 3rem;
   margin-bottom: 3rem;
 
@@ -28,21 +21,17 @@
   }
 
   &__content {
-    padding: 35px 40px 33px;
+    margin-top: 3.2rem;
+    margin-bottom: 5rem;
+    padding: 2.2rem 2.5rem 2.1rem;
     border: 2px solid $white;
     color: $white;
-    text-align: center;
-
-    @include media-breakpoint-up(md) {
-      text-align: left;
-    }
   }
 
   &__title {
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
     font-family: $font-mark-pro;
     font-size: 22 / 16 + rem;
-    font-weight: 700;
     line-height: calc(34 / 22);
     letter-spacing: 0.8px;
 
@@ -52,7 +41,7 @@
     }
 
     @include media-breakpoint-up(lg) {
-      margin-bottom: 12px;
+      margin-bottom: 0.8rem;
       font-size: 28 / 16 + rem;
       line-height: calc(34 / 28);
       letter-spacing: 1.1px;
@@ -60,10 +49,10 @@
   }
 
   &__desc {
-    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
 
     @include media-breakpoint-up(md) {
-      margin-bottom: 18px;
+      margin-bottom: 1.1rem;
     }
 
     b,
@@ -76,6 +65,6 @@
 
   &__img {
     max-width: 130px;
-    margin-bottom: 35px;
+    margin-bottom: 22rem;
   }
 }

@@ -1,0 +1,80 @@
+.img-text {
+  @extend %default-block;
+  @extend %fullblock;
+
+  &__content {
+    padding-top: 2rem;
+    margin-top: -1.3rem;
+    background: $white;
+
+    @include media-breakpoint-up(md) {
+      padding-bottom: 2.4rem;
+    }
+  }
+
+  &__text {
+    @include media-breakpoint-up(md) {
+      padding-top: 4.4rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+      padding-top: 5.7rem;
+    }
+  }
+
+  &--left & {
+    &__content {
+      @include media-breakpoint-up(md) {
+        position: relative;
+        z-index: 1;
+        padding-right: 2.5rem;
+        margin-right: -6.1rem;
+      }
+    }
+  }
+
+  &--right & {
+    &__content {
+      @include media-breakpoint-up(md) {
+        padding-left: 2.5rem;
+        margin-left: -6.1rem;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 22 / 16 + rem;
+    line-height: calc(34 / 22);
+    letter-spacing: 0.8px;
+    margin-bottom: 1.8rem;
+
+    @include media-breakpoint-up(sm) {
+      font-size: 28 / 16 + rem;
+      line-height: calc(34 / 28);
+      letter-spacing: 0.9px;
+      margin-bottom: 0.4rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 0.9rem;
+    }
+  }
+
+  &__thumb {
+    @extend %fullblock;
+
+    &-img {
+      width: 100%;
+    }
+
+    @include media-breakpoint-up(md) {
+      position: static;
+      margin: 0;
+      width: auto;
+    }
+  }
+
+  &__desc {
+    margin-bottom: 1rem;
+  }
+}

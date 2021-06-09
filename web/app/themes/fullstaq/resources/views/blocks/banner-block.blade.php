@@ -19,7 +19,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12 col-md-5">
-          <div class="banner-block__content">
+          <div class="banner-block__content text-center text-md-left">
             @unless(empty($block_data['banner_content']['title']))
               <h2 class="banner-block__title">{!! $block_data['banner_content']['title'] !!}</h2>
             @endunless
