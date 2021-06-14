@@ -1,0 +1,117 @@
+.contact-block {
+  @extend %gtb-block;
+
+  position: relative;
+
+  &--gtb {
+    width: 100vw;
+    margin-left: -50vw;
+    left: 50%;
+  }
+
+  &__wrapper {
+    position: relative;
+    background-color: $gray-7;
+  }
+
+  &__title {
+    margin-bottom: 28px;
+    text-align: center;
+
+    @include media-breakpoint-up(sm) {
+      font-size: 28 / 16 + rem;
+      line-height: calc(34 / 28);
+      letter-spacing: 1.1px;
+    }
+  }
+
+  &__background {
+    min-height: 300px;
+    color: $white;
+    background-color: $purple-2;
+    background-size: cover;
+    background-position: center right;
+
+    @include media-breakpoint-up(sm) {
+      height: 600px;
+      background: transparent !important;
+    }
+
+    &-sm-visible {
+      @include media-breakpoint-up(sm) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: calc(41.66667% + 15px);
+        background-color: $purple-2;
+        background-size: cover;
+        background-position: center right;
+      }
+    }
+
+    &-info {
+      padding: 55px 0;
+      text-align: center;
+
+      @include media-breakpoint-up(sm) {
+        padding-top: 85px;
+        max-width: 350px;
+        text-align: left;
+      }
+    }
+
+    &-content {
+      font-size: 18 / 16 + rem;
+      line-height: calc(28 / 18);
+      letter-spacing: 0.7px;
+      margin-bottom: 32px;
+
+      @include media-breakpoint-up(sm) {
+        font-size: 22 / 16 + rem;
+        line-height: calc(28 / 22);
+        letter-spacing: 0.8px;
+      }
+
+      b,
+      strong,
+      em,
+      s {
+        color: $white;
+      }
+    }
+
+    &-phone {
+      letter-spacing: 0.6px;
+      margin-bottom: 25px;
+
+      a {
+        color: $white;
+      }
+    }
+
+    &-address {
+      letter-spacing: 0.6px;
+    }
+  }
+
+  .gform {
+    &_heading {
+      display: none;
+    }
+
+    &_wrapper {
+      padding: 30px 0;
+      margin-bottom: 0;
+
+      @include media-breakpoint-up(sm) {
+        padding: 75px 15px 30px;
+      }
+
+      @include media-breakpoint-up(xl) {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+}
