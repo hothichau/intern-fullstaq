@@ -29,13 +29,11 @@
     }
 
     &-info {
-      padding: 5rem 0;
-      text-align: center;
+      padding: 3rem 0;
 
       @include media-breakpoint-up(sm) {
         padding-top: 5rem;
         max-width: 350px;
-        text-align: left;
       }
     }
 
