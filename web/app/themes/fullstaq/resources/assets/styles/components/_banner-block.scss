@@ -1,0 +1,74 @@
+.banner-block {
+  @extend %fullblock;
+
+  min-height: 560px;
+  background: $purple-2 center cover;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba($black, 0.4);
+    content: "";
+
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+  }
+
+  &__content {
+    margin-top: 3.2rem;
+    margin-bottom: 5rem;
+    padding: 2.2rem 2.5rem 2.1rem;
+    border: 2px solid $white;
+    color: $white;
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+    font-family: $font-mark-pro;
+    font-size: 22 / 16 + rem;
+    line-height: calc(34 / 22);
+    letter-spacing: 0.8px;
+
+    @include media-breakpoint-up(md) {
+      font-size: 24 / 16 + rem;
+      line-height: calc(34 / 24);
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 0.8rem;
+      font-size: 28 / 16 + rem;
+      line-height: calc(34 / 28);
+      letter-spacing: 1.1px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 2rem;
+  }
+
+  &__desc {
+    margin-bottom: 1.5rem;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 1.1rem;
+    }
+
+    b,
+    strong,
+    em,
+    s {
+      color: $white;
+    }
+  }
+
+  &__img {
+    max-width: 130px;
+    margin-bottom: 22rem;
+  }
+}
