@@ -16,7 +16,7 @@
 @if(!empty($block_data))
   <div {!! $block_data['block_id'] !!} class="contact-block contact-block--gtb">
     @unless(empty($block_data['block_title']))
-      <h2 class="contact-block__title">{!! $block_data['block_title'] !!}</h2>
+      <h2 class="text-center">{!! $block_data['block_title'] !!}</h2>
     @endunless
     <div class="contact-block__wrapper">
       <div class="contact-block__background-sm-visible" {!! !empty($block_data['banner_image']) ? 'style="background-image:url(' . $block_data['banner_image'] .  ')"' : ''  !!} ></div>

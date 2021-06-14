@@ -1,36 +1,16 @@
 .contact-block {
-  @extend %gtb-block;
-
-  position: relative;
-
-  &--gtb {
-    width: 100vw;
-    margin-left: -50vw;
-    left: 50%;
-  }
+  @extend %default-block;
+  @extend %fullblock;
 
   &__wrapper {
     position: relative;
-    background-color: $gray-7;
-  }
-
-  &__title {
-    margin-bottom: 28px;
-    text-align: center;
-
-    @include media-breakpoint-up(sm) {
-      font-size: 28 / 16 + rem;
-      line-height: calc(34 / 28);
-      letter-spacing: 1.1px;
-    }
+    background-color: $gray-8;
   }
 
   &__background {
     min-height: 300px;
     color: $white;
-    background-color: $purple-2;
-    background-size: cover;
-    background-position: center right;
+    background: cover $purple-2 center right;
 
     @include media-breakpoint-up(sm) {
       height: 600px;
@@ -43,19 +23,17 @@
         top: 0;
         left: 0;
         bottom: 0;
-        width: calc(41.66667% + 15px);
-        background-color: $purple-2;
-        background-size: cover;
-        background-position: center right;
+        width: 43%;
+        background: cover $purple-2 center right;
       }
     }
 
     &-info {
-      padding: 55px 0;
+      padding: 5rem 0;
       text-align: center;
 
       @include media-breakpoint-up(sm) {
-        padding-top: 85px;
+        padding-top: 5rem;
         max-width: 350px;
         text-align: left;
       }
@@ -65,25 +43,17 @@
       font-size: 18 / 16 + rem;
       line-height: calc(28 / 18);
       letter-spacing: 0.7px;
-      margin-bottom: 32px;
+      margin-bottom: 2rem;
 
       @include media-breakpoint-up(sm) {
         font-size: 22 / 16 + rem;
         line-height: calc(28 / 22);
-        letter-spacing: 0.8px;
-      }
-
-      b,
-      strong,
-      em,
-      s {
-        color: $white;
+        letter-spacing: 0.9px;
       }
     }
 
     &-phone {
       letter-spacing: 0.6px;
-      margin-bottom: 25px;
 
       a {
         color: $white;
@@ -101,11 +71,11 @@
     }
 
     &_wrapper {
-      padding: 30px 0;
+      padding: 1.9rem 0;
       margin-bottom: 0;
 
       @include media-breakpoint-up(sm) {
-        padding: 75px 15px 30px;
+        padding: 4.7rem 1rem 1.9rem;
       }
 
       @include media-breakpoint-up(xl) {
