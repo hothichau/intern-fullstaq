@@ -16,7 +16,6 @@
     font-size: 13 / 16 + rem;
     line-height: calc(30 / 13);
     text-transform: capitalize;
-    font-weight: normal;
 
     @include media-breakpoint-up(md) {
       font-size: 1rem;
