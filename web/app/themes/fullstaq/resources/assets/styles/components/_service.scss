@@ -1,0 +1,81 @@
+.service-block {
+  @extend %fullblock;
+
+  background-color: $gray-8;
+  padding: 2.3rem 1rem;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+
+  @include media-breakpoint-up(md) {
+    padding: 3rem 0 0;
+    margin-top: 3.7rem;
+    background-color: $gray-12;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: 5rem 0 4.4rem 0;
+  }
+
+  &__title {
+    @extend .container;
+
+    margin-bottom: 2rem;
+  }
+
+  &__feature-image {
+    display: none;
+
+    @include media-breakpoint-up(md) {
+      display: block;
+      position: absolute;
+      top: -20px;
+      right: -30%;
+      width: 500px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      width: 500px;
+      right: -140px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      right: calc((100% - 1140px) / 2);
+      width: 400px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 2.4rem;
+
+    &-link {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    &-content {
+      color: $black-1;
+
+      &-title {
+        font-family: $font-mark-pro;
+        font-size: 18 / 16 + rem;
+        line-height: calc(23 / 18);
+        letter-spacing: 0.4px;
+        transition: color 0.3s;
+        margin: 0;
+
+        &:hover {
+          color: $purple-2;
+        }
+      }
+    }
+
+    &-img {
+      height: 47px;
+      width: 47px;
+      margin-right: 1rem;
+    }
+  }
+}

@@ -14,15 +14,23 @@
   $block_data = \App\Controllers\App::getServiceBlockData();
 @endphp
 @if(!empty($block_data['block_title']) && !empty($block_data['item_list']))
-  <div {!! $block_data['block_id'] !!}>
-    {!! $block_data['block_title'] !!}
-    @unless(empty($block_data['feature_image']))
-      <img src="{!! $block_data['feature_image'] !!}">
-    @endunless
+  <div {!! $block_data['block_id'] !!} class="service-block">
+    <h2 class="service-block__title">{!! $block_data['block_title'] !!}</h2>
+      @unless(empty($block_data['feature_image']))
+        <img class="service-block__feature-image" src="{!! $block_data['feature_image'] !!}" alt="featured-image">
+      @endunless
     @if(!empty($block_data['item_list']))
-      @foreach($block_data['item_list'] as $service)
-        @include('partials.block.service-block-item')
-      @endforeach
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-8">
+            <div class="row">
+              @foreach($block_data['item_list'] as $service)
+                @include('partials.block.service-block-item')
+              @endforeach
+            </div>
+          </div>
+        </div>
+      </div>
     @endif
   </div>
 @elseif(is_admin())

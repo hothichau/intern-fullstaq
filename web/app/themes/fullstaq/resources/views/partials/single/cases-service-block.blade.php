@@ -13,3 +13,4 @@
     @endunless
   </section>
 @endunless
+@dump($service_block)
