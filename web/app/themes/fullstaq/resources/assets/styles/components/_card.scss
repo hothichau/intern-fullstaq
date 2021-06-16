@@ -1,23 +1,26 @@
 .card {
   &__inner {
-    padding-left: 1rem;
+    padding: 0;
+
+    @include media-breakpoint-up(lg) {
+      padding: 0 1rem;
+    }
   }
 
   &__title {
+    margin-bottom: 0.3rem;
     font-family: $font-mark-pro;
     font-size: 18 / 16 + rem;
     line-height: calc(23 / 18);
     letter-spacing: 0.4px;
     transition: color 0.3s;
-    margin-bottom: 0.3rem;
+    color: $black-2;
   }
 
-  &__desc {
-    margin-bottom: 0;
+  &__text {
     font-size: 14 / 16 + rem;
     line-height: calc(21 / 14);
-    max-height: 80px;
-    overflow: hidden;
+    max-height: 65px;
   }
 
   &__thumb {
@@ -38,10 +41,10 @@
   }
 
   &__link {
-    color: $black-1;
+    color: $black-2;
 
     &:hover {
-      color: $black-1;
+      color: $black-2;
       text-decoration: none;
 
       .card {

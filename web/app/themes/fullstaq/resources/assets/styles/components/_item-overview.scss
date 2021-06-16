@@ -1,0 +1,69 @@
+.item-overview {
+  &--small {
+    .card {
+      &__inner {
+        padding: 1.3rem 2rem 0 0;
+
+        @include media-breakpoint-up(lg) {
+          position: absolute;
+          bottom: 0;
+          left: 15px;
+          width: 260px;
+          background: $white;
+        }
+      }
+
+      &__thumb {
+        @include media-breakpoint-up(lg) {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &--purple {
+    @include media-breakpoint-up(lg) {
+      height: 100%;
+      color: $white;
+      background: $purple-2;
+
+      .card {
+        &__inner {
+          padding-left: 1rem;
+        }
+
+        &__link {
+          color: $white;
+
+          &:hover {
+            .card {
+              &__title {
+                color: $orange;
+              }
+            }
+          }
+        }
+      }
+
+      .time-cate {
+        color: $white;
+      }
+    }
+  }
+}
+
+.feature-image {
+  margin-bottom: 1.2rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.entry-content {
+  p {
+    text-align: justify;
+  }
+}

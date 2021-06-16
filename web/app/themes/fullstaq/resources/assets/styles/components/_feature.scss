@@ -9,7 +9,7 @@
       position: relative;
     }
 
-    &--large {
+    &--small {
       .card {
         &__inner {
           @include media-breakpoint-up(lg) {
@@ -17,7 +17,8 @@
             bottom: 0;
             left: 15px;
             width: 260px;
-            padding: 1.3rem 0;
+            padding-left: 0;
+            padding-top: 1rem;
             background: $white;
           }
         }
@@ -37,8 +38,8 @@
         background: $purple-2;
 
         .card {
-          &__inner {
-            padding-left: 1rem;
+          &__title {
+            color: $white;
           }
 
           &__link {
@@ -63,11 +64,9 @@
 }
 
 .time-cate {
-  margin-bottom: 0.3rem;
-
-  &__time {
-    font-size: 10 / 16 + rem;
-    line-height: calc(11 / 10);
-    letter-spacing: normal;
-  }
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-size: 10 / 16 + rem;
+  line-height: calc(11 / 10);
+  letter-spacing: normal;
 }

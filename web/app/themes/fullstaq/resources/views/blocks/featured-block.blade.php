@@ -20,14 +20,14 @@
     @endunless
     <div class="container">
       <div class="row">
-        <div class="col-12 col-md-4 featured-block__item {{ $block_data['layout_style'] === 'large' ? 'col-lg-6 featured-block__item--large' : '' }}">
+        <div class="col-12 col-md-4 featured-block__item {{ $block_data['layout_style'] === 'small' ? 'col-lg-6 featured-block__item--small' : '' }}">
           @include('partials.overview.overview-item', ['article' => $block_data['featured_article_1']])
         </div>
-        <div class="col-12 col-md-4 featured-block__item {{ $block_data['layout_style'] === 'large' ? 'col-lg-3' : '' }}">
+        <div class="col-12 col-md-4 featured-block__item {{ $block_data['layout_style'] === 'small' ? 'col-lg-3' : '' }}">
           @include('partials.overview.overview-item', ['article' => $block_data['featured_article_2']])
         </div>
-        <div class="col-12 col-md-4 featured-block__item {{ $block_data['layout_style'] === 'large' ? 'col-lg-3' : '' }}">
-          <div class="{{ $block_data['layout_style'] === 'large' ? 'featured-block__item--purple' : '' }}">
+        <div class="col-12 col-md-4 featured-block__item {{ $block_data['layout_style'] === 'small' ? 'col-lg-3' : '' }}">
+          <div class="{{ $block_data['layout_style'] === 'small' ? 'featured-block__item--purple' : '' }}">
             @include('partials.overview.overview-item', ['article' => $block_data['featured_article_3']])
           </div>
         </div>

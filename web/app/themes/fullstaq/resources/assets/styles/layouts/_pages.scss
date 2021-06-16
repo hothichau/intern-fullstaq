@@ -1,0 +1,47 @@
+.wrap {
+  overflow: hidden;
+}
+
+.wp-block-buttons {
+  margin-bottom: 40px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.main {
+  padding-bottom: 40px;
+
+  @include media-breakpoint-up(md) {
+    padding-bottom: 70px;
+  }
+}
+
+.error-page-content {
+  padding: 90px 0 136px;
+}
+
+.single-post {
+  .social-share {
+    margin-top: 37px;
+    padding-top: 30px;
+    border-top: 1px solid $gray-10;
+  }
+}
+
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background: rgba($white, 0.5) url(../images/loading.svg) center no-repeat;
+  background-size: 100px auto;
+}
+
+.wp-block-code,
+pre[class*="language-"] {
+  margin: 0 0 30px;
+}
