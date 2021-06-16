@@ -42,7 +42,6 @@ const menuEvent = function () {
       $(this).removeClass('active').next().slideUp();
     } else {
       $('.header .dropdown > a.active').removeClass('active').next().slideUp();
-
       $(this).addClass('active').next().slideDown();
     }
   });
