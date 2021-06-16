@@ -24,7 +24,7 @@
               <h2 class="banner-block__title">{!! $block_data['banner_content']['title'] !!}</h2>
             @endunless
             @unless(empty($block_data['banner_content']['txt']))
-              <div class="banner-block__text">{!! $block_data['banner_content']['txt'] !!}</div>
+              <div class="banner-block__text">{!! \App\cut_string_by_char($block_data['banner_content']['txt'], 150)  !!}</div>
             @endunless
             @unless(empty($block_data['banner_content']['image']))
               <img class="banner-block__img" src="{!! $block_data['banner_content']['image'] !!}" alt="banner-image">

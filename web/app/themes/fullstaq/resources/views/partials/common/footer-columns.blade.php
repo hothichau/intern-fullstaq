@@ -9,5 +9,5 @@
   </ul>
 @endif
 @if(!empty($footerColumn['link']))
-  <a class="btn-orange" href="{{ $footerColumn['link'] }}">{!! __('Subscribe', 'fullstaq') !!}</a>
+  <a class="footer__btn btn-orange" href="{{ $footerColumn['link'] }}">{!! __('Subscribe', 'fullstaq') !!}</a>
 @endif
