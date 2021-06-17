@@ -1,65 +1,42 @@
 .item-overview {
-  &--small {
+  margin-bottom: 3.8rem;
+
+  &--related {
+    margin-bottom: 0;
+  }
+
+  .card {
+    &__inner {
+      @include media-breakpoint-up(lg) {
+        padding: 0 1rem;
+      }
+    }
+  }
+
+  &--large {
     .card {
       &__inner {
-        padding: 1.3rem 2rem 0 0;
-
         @include media-breakpoint-up(lg) {
           position: absolute;
           bottom: 0;
           left: 15px;
           width: 260px;
+          padding: 0 1.3rem 1.1rem 0;
+          padding-left: 0;
           background: $white;
         }
-      }
-
-      &__thumb {
-        @include media-breakpoint-up(lg) {
-          margin-bottom: 0;
-        }
-      }
-    }
-  }
-
-  &--purple {
-    @include media-breakpoint-up(lg) {
-      height: 100%;
-      color: $white;
-      background: $purple-2;
-
-      .card {
-        &__inner {
-          padding-left: 1rem;
-        }
-
-        &__link {
-          color: $white;
-
-          &:hover {
-            .card {
-              &__title {
-                color: $orange;
-              }
-            }
-          }
-        }
-      }
-
-      .time-cate {
-        color: $white;
       }
     }
   }
 }
 
 .feature-image {
-  margin-bottom: 1.2rem;
+  margin: 2rem 0;
 }
 
 img {
   max-width: 100%;
   height: auto;
-  vertical-align: middle;
 }
 
 .entry-content {

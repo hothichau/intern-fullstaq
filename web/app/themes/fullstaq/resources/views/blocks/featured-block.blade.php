@@ -20,7 +20,7 @@
     @endunless
     <div class="container">
       <div class="row">
-        <div class="col-12 col-md-4 featured-block__item {{ $block_data['layout_style'] === 'small' ? 'col-lg-6 featured-block__item--small' : '' }}">
+        <div class="col-12 col-md-4 featured-block__item {{ $block_data['layout_style'] === 'small' ? 'col-lg-6 featured-block__item--large' : '' }}">
           @include('partials.overview.overview-item', ['article' => $block_data['featured_article_1']])
         </div>
         <div class="col-12 col-md-4 featured-block__item {{ $block_data['layout_style'] === 'small' ? 'col-lg-3' : '' }}">

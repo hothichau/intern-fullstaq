@@ -9,7 +9,7 @@
       position: relative;
     }
 
-    &--small {
+    &--large {
       .card {
         &__inner {
           @include media-breakpoint-up(lg) {

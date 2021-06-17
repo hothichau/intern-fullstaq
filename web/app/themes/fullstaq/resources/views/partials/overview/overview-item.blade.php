@@ -7,6 +7,6 @@
   <div class="card__inner">
     @include('partials.entry-meta', ['id' => $article['ID']])
     <p class="card__title">{{ $article['title'] }}</p>
-    <p class="card__text">{!! $article['excerpt'] !!}</p>
+    <p class="card__text">{!! \App\cut_string_by_char($article['excerpt'], 80)  !!}</p>
   </div>
 </a>
