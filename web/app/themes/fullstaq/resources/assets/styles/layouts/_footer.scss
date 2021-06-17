@@ -1,6 +1,15 @@
 .footer {
   color: $white;
 
+  &__btn {
+    @include media-breakpoint-down(md) {
+      padding: 0.5rem 1rem;
+      letter-spacing: 1.3px;
+      font-size: 9 / 16 + rem;
+      line-height: calc(16 / 9);
+    }
+  }
+
   &__top {
     background: $purple-2;
     padding: 1.5rem 0;

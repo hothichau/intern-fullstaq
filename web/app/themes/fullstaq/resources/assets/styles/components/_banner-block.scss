@@ -22,8 +22,7 @@
 
   &__content {
     margin-top: 3.2rem;
-    margin-bottom: 5rem;
-    padding: 2.2rem 2.5rem 2.1rem;
+    padding: 2.2rem 2.5rem;
     border: 2px solid $white;
     color: $white;
   }
@@ -49,14 +48,10 @@
   }
 
   &__text {
-    margin-bottom: 2rem;
-  }
-
-  &__desc {
     margin-bottom: 1.5rem;
 
     @include media-breakpoint-up(md) {
-      margin-bottom: 1.1rem;
+      margin-bottom: 2rem;
     }
 
     b,
@@ -68,7 +63,7 @@
   }
 
   &__img {
+    margin-top: 1rem;
     max-width: 130px;
-    margin-bottom: 22rem;
   }
 }
