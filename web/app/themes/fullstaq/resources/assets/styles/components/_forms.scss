@@ -115,6 +115,7 @@
         line-height: calc(38 / 14);
         letter-spacing: normal;
         color: $gray-16;
+        display: none;
 
         &:focus {
           border-color: $purple-2;
