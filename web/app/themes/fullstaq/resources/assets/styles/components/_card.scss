@@ -1,7 +1,5 @@
 .card {
   &__inner {
-    padding: 0;
-
     @include media-breakpoint-up(lg) {
       padding: 0 1rem;
     }
