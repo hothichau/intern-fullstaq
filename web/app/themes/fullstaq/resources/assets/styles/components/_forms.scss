@@ -12,32 +12,9 @@
   }
 
   &_footer {
-    display: inline-block;
-    overflow: hidden;
-    transform: translate(0);
-    background: $orange;
+    @extend %btn;
 
-    &::before {
-      height: 150px;
-      background: $black;
-      content: "";
-      position: absolute;
-      top: -250px;
-      left: -2px;
-      right: -2px;
-      z-index: -1;
-      transform: skewY(15deg) translateY(0);
-      transition: transform 0.2s ease, top 0.2s ease;
-    }
-
-    &:hover {
-      color: $white;
-      text-decoration: none;
-
-      &::before {
-        top: -50px;
-      }
-    }
+    background: $yellow;
   }
 
   &_wrapper {
