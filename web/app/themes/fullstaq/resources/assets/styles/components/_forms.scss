@@ -104,32 +104,6 @@
           display: none;
         }
       }
-
-      &_select {
-        padding: 1rem 0;
-        border: none;
-        border-bottom: 1px solid black;
-        outline: none;
-        width: 100%;
-        font-size: 14 / 16 + rem;
-        line-height: calc(38 / 14);
-        letter-spacing: normal;
-        color: $gray-16;
-        display: none;
-
-        &:focus {
-          border-color: $purple-2;
-        }
-
-        option[value=""] {
-          display: none;
-        }
-
-        option {
-          color: $black-1;
-          padding: 3rem 0;
-        }
-      }
     }
   }
 
