@@ -82,7 +82,7 @@
     "custom-event-polyfill": "^1.0.7",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.7",
-    "select2": "^4.0.7",
+    "select2": "^4.1.0-rc.0",
     "slick-carousel": "^1.8.1"
   }
 }
