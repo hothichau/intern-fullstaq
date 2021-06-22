@@ -1,0 +1,39 @@
+.page-numbers {
+  display: inline-block;
+  margin: 0 1.5rem;
+  vertical-align: middle;
+  font-size: 13 / 16 + rem;
+  line-height: calc(32 / 16);
+  color: $black-3;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &.current {
+    color: $purple-2;
+  }
+
+  &.next,
+  &.prev {
+    height: 10px;
+    width: 7px;
+    font-size: 0;
+  }
+
+  &.next {
+    background: url(../images/arrow-right.svg) no-repeat center;
+
+    &:hover {
+      background-image: url(../images/arrow-right-hover.svg);
+    }
+  }
+
+  &.prev {
+    background: url(../images/arrow-left.svg) no-repeat center;
+
+    &:hover {
+      background-image: url(../images/arrow-left-hover.svg);
+    }
+  }
+}

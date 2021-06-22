@@ -1,0 +1,64 @@
+.featured-block {
+  @extend %default-block;
+  @extend %fullblock;
+
+  &__item {
+    margin-bottom: 0.8rem;
+
+    @include media-breakpoint-up(lg) {
+      position: relative;
+    }
+
+    &--large {
+      .card {
+        &__inner {
+          @include media-breakpoint-up(lg) {
+            position: absolute;
+            bottom: 0;
+            left: 15px;
+            width: 260px;
+            padding-left: 0;
+            padding-top: 1rem;
+            background: $white;
+          }
+        }
+
+        &__thumb {
+          @include media-breakpoint-up(lg) {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    &--purple {
+      @include media-breakpoint-up(lg) {
+        height: 100%;
+        color: $white;
+        background: $purple-2;
+
+        .card {
+          &__title {
+            color: $white;
+          }
+
+          &__link {
+            color: $white;
+
+            &:hover {
+              .card {
+                &__title {
+                  color: $orange;
+                }
+              }
+            }
+          }
+        }
+
+        .time-cate {
+          color: $white;
+        }
+      }
+    }
+  }
+}
