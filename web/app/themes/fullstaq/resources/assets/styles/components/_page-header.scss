@@ -1,0 +1,67 @@
+.page-header {
+  position: relative;
+  background: url(../images/header-bg.jpg) no-repeat center;
+  color: $white;
+  height: 287px;
+  text-align: center;
+  background-size: cover;
+  margin-bottom: 2rem;
+
+  &__title {
+    margin-bottom: 0.6rem;
+  }
+
+  &__wrapper {
+    height: 265px;
+  }
+
+  .time-cate {
+    font-size: 13 / 16 + rem;
+    line-height: calc(28 / 13);
+    color: $white;
+  }
+
+  &__intro {
+    font-size: 13 / 16 + rem;
+    line-height: calc(20 / 13);
+
+    @include media-breakpoint-up(sm) {
+      font-size: 18 / 16 + rem;
+      line-height: calc(26 / 18);
+    }
+  }
+
+  &__breadcrumb {
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    bottom: -5px;
+    margin: 0;
+    text-align: left;
+  }
+
+  .breadcrumbs {
+    max-width: 1240px;
+    margin: 0 auto;
+    background-color: $white;
+    padding: 1.5rem 1rem 0;
+
+    @include media-breakpoint-up(sm) {
+      padding: 1.5rem 2.5rem 0;
+    }
+
+    a,
+    .breadcrumb_last {
+      font-size: 12 / 16 + rem;
+      line-height: calc(24 / 12);
+      color: $gray-14;
+      border-right: 1.5px solid $gray-14;
+      padding-right: 0.5rem;
+      padding-left: 0;
+
+      &:last-child {
+        border: none;
+      }
+    }
+  }
+}

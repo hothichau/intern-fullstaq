@@ -1,5 +1,5 @@
 .social-share {
-  margin: 2.8rem 0;
+  margin: 1.8rem 0 2.7rem;
 
   &__label {
     font-family: $font-mark-pro;
@@ -9,13 +9,13 @@
   }
 
   &__link {
-    width: 35px;
-    height: 35px;
-    line-height: 2.3rem;
+    width: 36px;
+    height: 36px;
+    color: $white;
     border-radius: 50%;
     margin-left: 1rem;
+    line-height: calc(37 / 16);
     background-color: $purple-2;
-    color: $white;
     transition: background-color 0.3s;
 
     &:hover {

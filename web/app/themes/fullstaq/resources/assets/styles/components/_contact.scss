@@ -14,7 +14,7 @@
 
     @include media-breakpoint-up(sm) {
       height: 600px;
-      background: transparent !important;
+      background: transparent;
     }
 
     &-sm-visible {

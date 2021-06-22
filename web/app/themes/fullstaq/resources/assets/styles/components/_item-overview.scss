@@ -1,0 +1,31 @@
+.item-overview {
+  margin-bottom: 3.8rem;
+
+  &--related {
+    margin-bottom: 0;
+  }
+
+  .card {
+    &__inner {
+      @include media-breakpoint-up(lg) {
+        padding: 0 1rem;
+      }
+    }
+  }
+
+  &--large {
+    .card {
+      &__inner {
+        @include media-breakpoint-up(lg) {
+          position: absolute;
+          bottom: 0;
+          left: 15px;
+          width: 260px;
+          padding: 0 1.3rem 1.1rem 0;
+          padding-left: 0;
+          background: $white;
+        }
+      }
+    }
+  }
+}
