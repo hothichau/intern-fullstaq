@@ -1,0 +1,45 @@
+.cc {
+  &-window {
+    box-shadow: 0 2px 34px 0 rgba($black, 0.12);
+
+    @include media-breakpoint-up(lg) {
+      padding-top: 0.7rem;
+      padding-bottom: 0.8rem;
+    }
+  }
+
+  &-message {
+    font-size: 13 / 16 + rem;
+    line-height: calc(20 / 13);
+    color: $black-2;
+
+    @include media-breakpoint-up(lg) {
+      margin: 0;
+    }
+  }
+
+  &-btn {
+    @extend %btn;
+
+    font-size: 13 / 16 + rem;
+    padding: 12px 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: normal;
+    background: $orange;
+
+    @include media-breakpoint-up(lg) {
+      margin: 0 0 0 47px;
+    }
+  }
+
+  &-wrapper {
+    max-width: 1110px;
+    margin: auto;
+
+    a:not([href]):not([tabindex]):hover,
+    a:not([href]):not([tabindex]):focus {
+      color: $white;
+    }
+  }
+}
