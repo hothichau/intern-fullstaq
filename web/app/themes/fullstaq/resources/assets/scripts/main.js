@@ -1,7 +1,6 @@
 // import external dependencies
 import 'jquery';
 import 'slick-carousel';
-import 'select2/dist/js/select2.min';
 
 // Import everything from autoload
 import './autoload/**/*'
