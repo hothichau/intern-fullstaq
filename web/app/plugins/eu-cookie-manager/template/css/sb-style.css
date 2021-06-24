@@ -1,0 +1,64 @@
+.cc-window {
+    text-align: center;
+    background-color: #fff;
+    padding: 5px 15px 15px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+.cc-wrapper {
+    display: block;
+    width: 100%;
+}
+.cc-message {
+    display: block;
+    font-size: 16px;
+    color: #262626;
+    margin: 10px 0;
+}
+.cc-message a {
+    text-decoration: underline;
+}
+.cc-btn {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 5px 10px;
+    padding: 12px 15px 13px;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    background: #33aa9a;
+    cursor: pointer;
+    transition: all .3s;
+}
+.cc-more-btn {
+    color: #fff;
+    background: #000;
+}
+.cc-btn:hover {
+    color: #fff;
+    background: #29877a;
+    text-decoration: none;
+}
+.cc-more-btn:hover {
+    background: #29877a;
+}
+@media only screen and (min-width: 1024px) {
+    .cc-window {
+        padding: 10px;
+    }
+    .cc-wrapper {
+        display: flex;
+        align-items: center;
+    }
+    .cc-message {
+        flex: 1;
+        text-align: left;
+    }
+    .cc-compliance {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
