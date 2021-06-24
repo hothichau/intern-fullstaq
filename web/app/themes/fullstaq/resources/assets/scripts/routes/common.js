@@ -76,6 +76,8 @@ export default {
     slider();
     scroll();
     menuEvent();
+    initSelect();
+    customUpload();
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired
