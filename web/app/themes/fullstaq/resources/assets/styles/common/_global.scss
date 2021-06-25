@@ -6,12 +6,12 @@
 }
 
 %default-block {
-  margin-bottom: 2.5rem;
-  margin-top: 2.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 
   @include media-breakpoint-up(md) {
-    margin-bottom: 3.8rem;
-    margin-top: 3.8rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 
   &:last-child {
@@ -19,8 +19,8 @@
   }
 }
 
-.entry-content {
-  p {
-    text-align: justify;
-  }
-}
+// .entry-content {
+//   p {
+//     text-align: justify;
+//   }
+// }

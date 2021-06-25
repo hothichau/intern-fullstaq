@@ -3,9 +3,21 @@
   color: $white;
   background: $purple-2 cover center no-repeat;
   margin-bottom: 2.1rem;
+  background-position: 50%;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(9, 9, 11, 0.5);
+    content: "";
+  }
 
   + .breadcrumbs {
-    margin-top: -2rem;
+    margin-top: -1rem;
+    margin-bottom: 2rem;
     font-size: 12 / 16 + rem;
     line-height: calc(24 / 16);
   }
