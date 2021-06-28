@@ -41,7 +41,9 @@
         left: 0;
         bottom: 0;
         width: calc(41.66667% + 15px);
-        background-color: $purple-2 cover center right;
+        background-color: $purple-2;
+        background-size: cover;
+        background-position: center right;
       }
     }
 

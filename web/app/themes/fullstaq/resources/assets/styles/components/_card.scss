@@ -19,6 +19,7 @@
     font-size: 14 / 16 + rem;
     line-height: calc(21 / 14);
     max-height: 65px;
+    word-wrap: break-word;
   }
 
   &__thumb {

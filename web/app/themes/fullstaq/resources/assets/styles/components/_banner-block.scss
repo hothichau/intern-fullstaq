@@ -2,7 +2,9 @@
   @extend %fullblock;
 
   min-height: 560px;
-  background: $purple-2 center cover;
+  background: $purple-2;
+  background-size: cover;
+  background-position: center;
   margin-top: 3rem;
   margin-bottom: 3rem;
 
