@@ -1,25 +1,18 @@
 .service-block {
+  @extend %default-block;
   @extend %fullblock;
 
-  background-color: $gray-8;
-  padding: 2.3rem 1rem;
-  margin-bottom: 3rem;
-  margin-top: 3rem;
+  padding: 2.5rem 0 0.6rem;
+  background-color: $gray-7;
 
   @include media-breakpoint-up(md) {
-    padding: 3rem 0 0;
-    margin-top: 3.7rem;
-    background-color: $gray-12;
+    padding-top: 2.1rem;
+    margin-top: 1.5rem;
+    background-color: $gray-16;
   }
 
   @include media-breakpoint-up(lg) {
-    padding: 5rem 0 4.4rem 0;
-  }
-
-  &__title {
-    @extend .container;
-
-    margin-bottom: 2rem;
+    padding-bottom: 1.1rem;
   }
 
   &__feature-image {
@@ -44,38 +37,96 @@
     }
   }
 
+  &__title {
+    @extend .container;
+
+    margin-bottom: 1.9rem;
+    font-family: $font-mark-pro;
+    font-size: 22 / 16 + rem;
+    line-height: calc(34 / 22);
+    letter-spacing: 0.8px;
+
+    @include media-breakpoint-up(md) {
+      font-size: 28 / 16 + rem;
+      letter-spacing: 1.1px;
+    }
+  }
+
   &__item {
+    display: flex;
     margin-bottom: 2.4rem;
+    align-items: flex-start;
 
-    &-link {
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: none;
-      }
+    &-title {
+      margin-bottom: 0.3rem;
+      font-family: $font-mark-pro;
+      font-size: 18 / 16 + rem;
+      line-height: calc(23 / 18);
+      letter-spacing: 0.4px;
+      transition: color 0.3s;
     }
 
-    &-content {
-      color: $black-1;
+    &-img {
+      max-width: 63px;
+      width: 63px;
+      padding-right: 0.9rem;
+      flex: 0 0 63px;
+    }
 
-      &-title {
-        font-family: $font-mark-pro;
-        font-size: 18 / 16 + rem;
-        line-height: calc(23 / 18);
-        letter-spacing: 0.4px;
+    &-list {
+      padding: 0;
+
+      &-item {
+        margin-bottom: 0.4rem;
+
+        &::before {
+          display: none;
+        }
+      }
+
+      .service-block {
+        &__item {
+          &-list {
+            &-item {
+              padding-left: 0;
+            }
+          }
+        }
+      }
+
+      &-link {
+        display: inline-block;
+        padding-bottom: 5px;
+        color: $purple-2;
+        line-height: calc(24 / 16);
+        letter-spacing: 0.6px;
+        border-bottom: 1px dashed $purple-2;
         transition: color 0.3s;
-        margin: 0;
 
         &:hover {
-          color: $purple-2;
+          text-decoration: none;
         }
       }
     }
 
-    &-img {
-      height: 47px;
-      width: 47px;
-      margin-right: 1rem;
+    &-link {
+      color: $body-color;
+
+      &:hover {
+        text-decoration: none;
+
+        .service-block {
+          &__item {
+            &-title {
+              color: $purple-2;
+            }
+
+            &-desc {
+              color: $body-color;
+            }
+          }
+        }
+      }
     }
   }
 }

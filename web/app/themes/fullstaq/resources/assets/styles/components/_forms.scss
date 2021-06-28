@@ -22,6 +22,14 @@
     padding: 0;
 
     .upload-file {
+      @include media-breakpoint-up(sm) {
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding: 0;
+      }
+
       label {
         font-family: $font-mark-pro;
         font-size: 11 / 16 + rem;
@@ -34,10 +42,6 @@
         padding: 0 1rem;
         margin: 0;
       }
-    }
-
-    .gform_fileupload_rules {
-      display: none;
     }
 
     .button {

@@ -4,6 +4,12 @@
   min-height: 560px;
   background: $purple-2 center cover;
   margin-top: 3rem;
+  margin-bottom: 3rem;
+
+  &:last-child {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 
   &::before {
     position: absolute;

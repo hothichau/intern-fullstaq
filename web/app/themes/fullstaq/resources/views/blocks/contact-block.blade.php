@@ -22,8 +22,8 @@
       <div class="contact-block__background-sm-visible" {!! !empty($block_data['banner_image']) ? 'style="background-image:url(' . $block_data['banner_image'] .  ')"' : ''  !!} ></div>
       <div class="container">
         <div class="row">
-          <div class="col-12 col-sm-5 contact-block__background" {!! !empty($block_data['banner_image']) ? 'style="background-image:url(' . $block_data['banner_image'] .  ')"' : ''  !!}>
-            <div class="contact-block__background-info text-center text-md-left">
+          <div class="col-12 col-sm-5 contact-block__background" {!! empty($block_data['banner_image']) ? 'style="background-image:url(' . $block_data['banner_image'] .  ')"' : ''  !!}>
+            <div class="contact-block__background-info">
               <div class="contact-block__background-content">
                 {!! $block_data['banner_content'] !!}
               </div>
