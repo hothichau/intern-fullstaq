@@ -13,7 +13,7 @@
 @php
   $block_data = \App\Controllers\App::getImageTextBlockData();
 @endphp
-@if($block_data['image'] && !empty($block_data['content']['title']  && !empty($block_data['content']['txt'])))
+@if($block_data['image'] && !empty($block_data['content']['txt']))
 <div {!! $block_data['block_id'] !!} class="img-text {!! ($block_data['image_position'] === 'img-right') ? 'img-text--left' : 'img-text--right' !!}">
   <div class="container">
     <div class="row">
