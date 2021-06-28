@@ -3,12 +3,11 @@
   @extend %fullblock;
 
   padding: 2.5rem 0 0.6rem;
-  background-color: $gray-7;
+  background-color: $gray-1;
 
   @include media-breakpoint-up(md) {
     padding-top: 2.1rem;
-    margin-top: 1.5rem;
-    background-color: $gray-16;
+    margin-top: 3rem;
   }
 
   @include media-breakpoint-up(lg) {
